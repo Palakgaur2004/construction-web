@@ -22,7 +22,7 @@ const features = [
   {
     icon: <ThumbsUp className="w-8 h-8 text-rose-500" />,
     title: "Customer Satisfaction",
-    desc: "Our work isn't done until you're happy.",
+    desc: "Our work isn't done until you`re happy.",
   },
 ];
 
