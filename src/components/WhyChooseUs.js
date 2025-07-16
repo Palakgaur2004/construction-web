@@ -5,7 +5,7 @@ import { CheckCircle, Clock, HardHat, ThumbsUp } from "lucide-react";
 
 const features = [
   {
-    icon: <HardHat className="w-8 h-8 text-rose-500" />, // Changed to rose
+    icon: <HardHat className="w-8 h-8 text-rose-500" />,
     title: "Experienced Team",
     desc: "Skilled professionals delivering excellence in every project.",
   },
@@ -22,7 +22,7 @@ const features = [
   {
     icon: <ThumbsUp className="w-8 h-8 text-rose-500" />,
     title: "Customer Satisfaction",
-    desc: "Our work isn't done until you`re happy.",
+    desc: "Our work isn&rsquo;t done until you&rsquo;re happy.",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function WhyChooseUs() {
           viewport={{ once: true, amount: 0.3 }}
           className="text-center text-slate-600 max-w-2xl mx-auto mb-12"
         >
-          Here's what sets us apart in the construction industry — our commitment to excellence, on-time delivery, and your satisfaction.
+          Here&apos;s what sets us apart in the construction industry &mdash; our commitment to excellence, on-time delivery, and your satisfaction.
         </motion.p>
 
         {/* Feature Cards */}

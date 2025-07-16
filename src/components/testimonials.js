@@ -48,8 +48,12 @@ export function HomeTestimonials() {
                   <Star key={i} size={18} fill="currentColor" />
                 ))}
               </div>
-              <p className="text-slate-700 mb-4">"{testimonial.feedback}"</p>
-              <p className="text-sm font-semibold text-slate-900">— {testimonial.name}</p>
+              <p className="text-slate-700 mb-4">
+                &ldquo;{testimonial.feedback}&rdquo;
+              </p>
+              <p className="text-sm font-semibold text-slate-900">
+                &mdash; {testimonial.name}
+              </p>
             </motion.div>
           ))}
         </div>
