@@ -13,7 +13,7 @@ const stats = [
 
 export default function AboutCompany() {
   return (
-    <section className="bg-slate-200 py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+    <section className="bg-slate-200 py-16 sm:py-24 px-4">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -24,7 +24,7 @@ export default function AboutCompany() {
           className="grid grid-cols-1 lg:grid-cols-2 lg:gap-16"
         >
           {/* Image */}
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-slate-200 shadow">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-slate-500 shadow">
             <Image
               src="/aboutcompany.jpg"
               alt="BuilderPro team on site"

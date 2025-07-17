@@ -12,10 +12,11 @@ const navItems = [
   { name: 'Services', href: '/services' },
   { name: 'Projects', href: '/projects' },
   { name: 'How It Works', href: '/how-it-works' },
-  { name: 'About Us', href: '/about' },
+ 
   { name: 'Testimonials', href: '/testimonials' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
+   { name: 'About Us', href: '/about' },
 ]
 
 export default function Navbar() {
