@@ -23,7 +23,7 @@ const testimonials = [
 
 export function HomeTestimonials() {
   return (
-    <section className="bg-white py-16 px-4 md:px-8">
+    <section className="bg-slate-200 py-16 px-4 md:px-8  ">
       <div className="max-w-7xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
@@ -41,7 +41,7 @@ export function HomeTestimonials() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: idx * 0.2 }}
-              className="bg-slate-50 p-6 rounded-xl shadow hover:shadow-md border border-slate-200 text-left"
+              className="bg-white p-6 rounded-xl shadow hover:shadow-md border border-slate-200 text-left"
             >
               <div className="flex items-center gap-2 mb-4 text-rose-500">
                 {[...Array(5)].map((_, i) => (
