@@ -22,7 +22,7 @@ const features = [
   {
     icon: <ThumbsUp className="w-8 h-8 text-rose-500" />,
     title: "Customer Satisfaction",
-    desc: "Our work isn't done until you're happy.",
+    desc: "We complete our work only when you are fully satisfied.",
   },
 ];
 
@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center text-slate-600 max-w-2xl mx-auto mb-12"
         >
-          Here's what sets us apart in the construction industry — our commitment to excellence, on-time delivery, and your satisfaction.
+          Here&apos;s what sets us apart in the construction industry — our commitment to excellence, on-time delivery, and your satisfaction.
         </motion.p>
 
         {/* Feature Cards */}
