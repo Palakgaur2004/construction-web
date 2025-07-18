@@ -118,7 +118,7 @@ export default function AboutPage() {
 
       {/* 3. Stats */}
       <section className="py-20 bg-slate-200">
-        <div className="mx-auto max-w-6xl px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="mx-auto max-w-6xl px-6 grid grid-cols-2 md:grid-cols-4 gap-7 text-center">
           {stats.map((s, idx) => (
             <motion.div
               key={idx}
@@ -128,7 +128,7 @@ export default function AboutPage() {
               transition={{ duration: 0.6, delay: idx * 0.1 }}
               className="bg-white shadow-xl py-10 rounded-lg"
             >
-              <span className="block text-5xl font-extrabold text-rose-600">
+              <span className="block text-4xl font-bold text-rose-600">
                 {s.value}
                 {s.suffix}
               </span>
@@ -162,9 +162,9 @@ export default function AboutPage() {
                 <Image
                   src={f.img}
                   alt={f.name}
-                  width={120}
+                  width={320}
                   height={120}
-                  className="rounded-full object-cover"
+                  className="rounded-2xl object-cover"
                 />
                 <h3 className="mt-4 text-2xl font-bold">{f.name}</h3>
                 <p className="text-rose-600 font-medium">{f.role}</p>
