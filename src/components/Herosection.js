@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -30,7 +30,8 @@ export function Herosection() {
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-6xl font-bold leading-tight max-w-4xl"
         >
-          Building <span className="text-rose-600">Better Futures</span> One Brick at a Time
+          Building <span className="text-rose-600">Better Futures</span> One
+          Brick at a Time
         </motion.h1>
 
         {/* Animated Subtext */}
@@ -40,7 +41,8 @@ export function Herosection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-lg md:text-xl mt-4 max-w-2xl text-slate-200"
         >
-          From concept to completion — we deliver craftsmanship that stands the test of time.
+          From concept to completion — we deliver craftsmanship that stands the
+          test of time.
         </motion.p>
 
         {/* Action Buttons */}
@@ -50,15 +52,19 @@ export function Herosection() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex flex-wrap justify-center gap-4 mt-6"
         >
-          <Button className="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 text-lg shadow-lg">
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 text-lg shadow-lg rounded-md transition"
+          >
             Get a Quote
-          </Button>
-          <Button
-            variant="outline"
-            className="text-white border-white px-6 py-3 text-lg hover:bg-white/10"
+          </Link>
+
+          <Link
+            href="/projects"
+            className="inline-flex items-center justify-center text-white border border-white px-6 py-3 text-lg rounded-md hover:bg-white/10 transition"
           >
             View Projects
-          </Button>
+          </Link>
         </motion.div>
 
         {/* Decorative Icon */}
@@ -67,9 +73,7 @@ export function Herosection() {
           animate={{ opacity: 0.15 }}
           transition={{ duration: 1, delay: 0.5 }}
           className="absolute bottom-10 right-10 hidden md:block"
-        >
-         
-        </motion.div>
+        ></motion.div>
 
         {/* Promise Strip */}
         <motion.div
@@ -81,17 +85,24 @@ export function Herosection() {
           <div className="flex flex-col items-center text-white ">
             <BadgeCheck size={36} className="text-rose-400 mb-2" />
             <h3 className="font-semibold text-lg">Timely Delivery</h3>
-            <p className="text-sm text-slate-300 mt-2 text-center">We value your time and ensure on-time project completion.</p>
+            <p className="text-sm text-slate-300 mt-2 text-center">
+              We value your time and ensure on-time project completion.
+            </p>
           </div>
           <div className="flex flex-col items-center text-white">
             <Workflow size={36} className="text-rose-400 mb-2" />
             <h3 className="font-semibold text-lg">Streamlined Process</h3>
-            <p className="text-sm text-slate-300 mt-2 text-center">From blueprint to handover, our process is smooth and transparent.</p>
+            <p className="text-sm text-slate-300 mt-2 text-center">
+              From blueprint to handover, our process is smooth and transparent.
+            </p>
           </div>
           <div className="flex flex-col items-center text-white">
             <BadgeCheck size={36} className="text-rose-400 mb-2" />
             <h3 className="font-semibold text-lg">Quality First</h3>
-            <p className="text-sm text-slate-300 mt-2 text-center">We prioritize quality materials and expert craftsmanship every step.</p>
+            <p className="text-sm text-slate-300 mt-2 text-center">
+              We prioritize quality materials and expert craftsmanship every
+              step.
+            </p>
           </div>
         </motion.div>
       </div>

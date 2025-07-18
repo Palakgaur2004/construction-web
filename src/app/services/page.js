@@ -69,44 +69,58 @@ export default function ServicesPage() {
   return (
     <main className="bg-slate-200">
       {/* HERO */}
-      <section className="relative bg-gradient-to-br from-rose-400 to-rose-600 py-24 text-white">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <motion.h1
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            transition={{ duration: 0.6 }}
-            className="text-4xl font-extrabold tracking-tight sm:text-5xl"
-          >
-            Our Services
-          </motion.h1>
-          <motion.p
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-4 text-lg sm:text-xl"
-          >
-            End-to-end construction solutions, tailored to your vision.
-          </motion.p>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <Link
-              href="/contact"
-              className="mt-8 inline-flex items-center gap-2 rounded-md bg-white px-5 py-2.5 text-sm font-semibold text-rose-600 shadow-sm hover:bg-rose-100"
-            >
-              Get a Quote <ArrowRight className="h-4 w-4" />
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+   <section className="relative bg-black py-50 text-white">
+  {/* Background Image */}
+  <div className="absolute inset-0">
+    <Image
+      src="/images/service1.jpg" 
+      alt="Background"
+      layout="fill"
+      objectFit="cover"
+      className="opacity-30"
+    />
+    <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/5 to-black/50" />
+  </div>
+
+  {/* Content */}
+  <div className="relative mx-auto max-w-4xl px-6 text-center">
+    <motion.h1
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeUp}
+      transition={{ duration: 0.6 }}
+      className="text-4xl font-extrabold tracking-tight sm:text-5xl"
+    >
+      Our Services
+    </motion.h1>
+    <motion.p
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeUp}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      className="mt-4 text-lg sm:text-xl"
+    >
+      End-to-end construction solutions, tailored to your vision.
+    </motion.p>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeUp}
+      transition={{ duration: 0.6, delay: 0.4 }}
+    >
+      <Link
+        href="/contact"
+        className="mt-8 inline-flex items-center gap-2 rounded-md bg-white px-5 py-2.5 text-sm font-semibold text-rose-600 shadow-sm hover:bg-rose-100"
+      >
+        Get a Quote <ArrowRight className="h-4 w-4" />
+      </Link>
+    </motion.div>
+  </div>
+</section>
+
 
       {/* SERVICES GRID */}
       <section className="py-16 sm:py-24">

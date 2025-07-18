@@ -9,7 +9,7 @@ import AboutCompany from "@/components/AboutCompany";
 
 export default function HomePage() {
   return (
-    <div className="text-center space-y-0">
+    <div className="text-center bg-slate-200 space-y-0">
       <Herosection />
       <WhyChooseUs />
       <HowItWorks />

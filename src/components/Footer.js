@@ -3,10 +3,17 @@
 import Link from 'next/link'
 import { Facebook, Instagram, Mail, MapPin, Phone, Linkedin } from 'lucide-react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0F172A]  text-slate-300 pt-12 pb-6 px-4 md:px-12">
+    <motion.footer
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.2 }} // 👈 animate every time it's visible
+      transition={{ duration: 0.6 }}
+      className="bg-[#0F172A] text-slate-300 pt-12 pb-6 px-4 md:px-12"
+    >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Logo & About */}
         <div className="space-y-4">
@@ -41,13 +48,13 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Newsletter / Social */}
+        {/* Social Icons */}
         <div>
           <h4 className="text-white text-lg font-semibold mb-4">Follow Us</h4>
           <div className="flex space-x-4">
-            <Link href="#"><Instagram size={20} className="hover:text-rose-400" /></Link>
-            <Link href="#"><Facebook size={20} className="hover:text-rose-400" /></Link>
-            <Link href="#"><Linkedin size={20} className="hover:text-rose-400" /></Link>
+            <Link href="#"><Instagram size={20} className="hover:text-rose-400 transition-colors duration-200" /></Link>
+            <Link href="#"><Facebook size={20} className="hover:text-rose-400 transition-colors duration-200" /></Link>
+            <Link href="#"><Linkedin size={20} className="hover:text-rose-400 transition-colors duration-200" /></Link>
           </div>
         </div>
       </div>
@@ -56,6 +63,6 @@ export default function Footer() {
       <div className="mt-10 border-t border-slate-700 pt-6 text-sm text-center text-slate-500">
         &copy; {new Date().getFullYear()} BuilderPro. All rights reserved.
       </div>
-    </footer>
+    </motion.footer>
   )
 }

@@ -1,5 +1,5 @@
 'use client'
-
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 
@@ -19,9 +19,12 @@ export default function CTABanner() {
         <p className="text-slate-300 text-lg">
           Let’s turn your vision into a solid, lasting reality. BuilderPro delivers quality, speed & trust.
         </p>
-        <Button className="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 text-lg rounded-md shadow">
-          Get a Free Quote
-        </Button>
+       <Link
+              href="/contact"
+              className="bg-rose-500 hover:bg-rose-600 text-white text-sm px-4 py-1.5 rounded-md transition font-semibold shadow"
+            >
+              Get a Free Quote
+            </Link>
       </motion.div>
     </section>
   )
