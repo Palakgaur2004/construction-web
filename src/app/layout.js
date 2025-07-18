@@ -7,7 +7,7 @@ export const metadata = {
   title: "BuilderPro",
   description: "End-to-end building and construction services",
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.ico",
    
   },
 }
