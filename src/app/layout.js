@@ -6,6 +6,10 @@ import  Footer from "@/components/Footer"
 export const metadata = {
   title: "BuilderPro",
   description: "End-to-end building and construction services",
+  icons: {
+    icon: "/favicon.png",
+   
+  },
 }
 
 export default function RootLayout({ children }) {
