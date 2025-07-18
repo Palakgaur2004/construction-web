@@ -6,15 +6,14 @@ import  Footer from "@/components/Footer"
 export const metadata = {
   title: "BuilderPro",
   description: "End-to-end building and construction services",
-  icons: {
-    icon: "/favicon.ico",
-   
-  },
+ 
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+
+    
       <body className="bg-[#F1F5F9] text-[#1E293B]">
         <Navbar />
         
