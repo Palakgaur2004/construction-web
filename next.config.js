@@ -1,5 +1,4 @@
-
-/** @type {import('next').NextConfig} */
+// ✅ next.config.mjs (correct)
 const nextConfig = {
   experimental: {
     turbo: {
@@ -12,4 +11,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
