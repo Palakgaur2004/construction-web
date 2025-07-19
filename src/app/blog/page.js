@@ -24,7 +24,7 @@ export default function BlogPage() {
   });
 
   return (
-    <main className="bg-white">
+    <main className="bg-slate-200">
       {/* Hero Section */}
       <section className="relative h-[50vh] sm:h-[60vh]">
         <Image
@@ -89,7 +89,7 @@ export default function BlogPage() {
               </div>
             </div>
 
-            <div className="bg-rose-50 p-6 rounded-2xl">
+            <div className="bg-white p-6 rounded-2xl">
               <h3 className="text-lg font-semibold mb-2">Newsletter</h3>
               <p className="text-sm text-gray-600 mb-4">
                 Stay updated with the latest tips & trends.
