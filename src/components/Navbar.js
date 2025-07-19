@@ -94,14 +94,14 @@ export default function Navbar() {
 
         {/* Mobile Menu Dropdown */}
         {menuOpen && (
-          <div className="md:hidden mt-2 space-y-2 pb-4">
+          <div className="md:hidden mt-3 space-y-3 pb-4">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`block text-sm font-medium px-2 ${
+                className={`block text-sm font-stretch-50% px-5 ${
                   pathname === item.href
-                    ? "text-rose-600 underline underline-offset-4"
+                    ? "text-rose-600 bold"
                     : "text-slate-700 hover:text-rose-500"
                 }`}
                 onClick={() => setMenuOpen(false)}
@@ -109,14 +109,7 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <div className="flex gap-2 mt-4 px-2">
-              <button className="flex-1 border border-gray-300 text-sm px-3 py-1.5 rounded-md hover:bg-gray-100 transition">
-                Call Now
-              </button>
-              <button className="flex-1 bg-rose-500 hover:bg-rose-600 text-white text-sm px-4 py-1.5 rounded-md transition font-semibold shadow">
-                Get a Quote
-              </button>
-            </div>
+            
           </div>
         )}
       </div>

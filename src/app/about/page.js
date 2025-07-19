@@ -51,9 +51,9 @@ const values = [
 
 export default function AboutPage() {
   return (
-    <main className="bg-white">
+    <main className="bg-white overflow-x-hidden ">
       {/* 1. Hero Section */}
-      <section className="relative h-[70vh] sm:h-[85vh]">
+      <section className="relative h-[60vh] sm:h-[85vh]">
         <Image
           src="/images/about-hero.jpg"
           alt="BuilderPro team"
