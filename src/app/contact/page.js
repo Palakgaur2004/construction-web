@@ -16,7 +16,7 @@ export default function ContactPage() {
 
   return (
     <main className="bg-slate-200">
-      {/* Hero */}
+      {/* Hero Section */}
       <section className="relative h-[60vh] sm:h-[70vh]">
         <Image
           src="/images/contact-hero.jpg"
@@ -105,18 +105,39 @@ export default function ContactPage() {
   );
 }
 
-/* --------- Booking Form ---------- */
+/* ---------- Booking Form ---------- */
 function BookingForm() {
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");   // success message
+  const [error, setError] = useState("");       // error message
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setSuccess("");
+    setError("");
+    const form = new FormData(e.target);
+    const data = Object.fromEntries(form.entries());
+
+    try {
+      const res = await fetch("/api/booking", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error("Submission failed");
+      setSuccess("Your booking is confirmed! 🎉");
+      e.target.reset();
+    } catch (err) {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <form
-      action="/api/booking"
-      method="POST"
-      className="space-y-6"
-      onSubmit={(e) => {
-        e.preventDefault();
-        alert("Booking submitted! (hook up your API)");
-      }}
-    >
+    <form onSubmit={handleSubmit} className="space-y-6">
       <h2 className="text-3xl font-bold text-gray-900">Schedule a Site Visit</h2>
       <Input label="Full Name" name="name" required />
       <Input label="Phone" name="phone" type="tel" required />
@@ -124,45 +145,79 @@ function BookingForm() {
       <Input label="Project Address" name="address" required />
       <Input label="Preferred Date" name="date" type="date" required />
       <Input label="Preferred Time" name="time" type="time" required />
+      {success && (
+        <div className="text-green-600 text-center font-semibold">{success}</div>
+      )}
+      {error && (
+        <div className="text-red-600 text-center font-semibold">{error}</div>
+      )}
       <button
         type="submit"
+        disabled={loading}
         className="w-full rounded-md bg-rose-600 py-3 text-white font-semibold hover:bg-rose-700"
       >
-        Confirm Booking
+        {loading ? "Submitting..." : "Confirm Booking"}
       </button>
     </form>
   );
 }
 
-/* --------- Quote Form ---------- */
+/* ---------- Quote Form ---------- */
 function QuoteForm() {
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");   // success message
+  const [error, setError] = useState("");       // error message
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setSuccess("");
+    setError("");
+    const form = new FormData(e.target);
+    const data = Object.fromEntries(form.entries());
+
+    try {
+      const res = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error("Submission failed");
+      setSuccess("Your message was sent! 📩");
+      e.target.reset();
+    } catch (err) {
+      setError("Failed to send request. Try again later.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <form
-      action="/api/quote"
-      method="POST"
-      className="space-y-6"
-      onSubmit={(e) => {
-        e.preventDefault();
-        alert("Quote request sent! (hook up your API)");
-      }}
-    >
+    <form onSubmit={handleSubmit} className="space-y-6">
       <h2 className="text-3xl font-bold text-gray-900">Request a Quote</h2>
       <Input label="Name" name="name" required />
       <Input label="Email" name="email" type="email" required />
       <Input label="Phone" name="phone" type="tel" required />
       <Input label="Message / Project Details" name="message" isTextArea />
-    
+      {success && (
+        <div className="text-green-600 text-center font-semibold">{success}</div>
+      )}
+      {error && (
+        <div className="text-red-600 text-center font-semibold">{error}</div>
+      )}
       <button
         type="submit"
+        disabled={loading}
         className="w-full rounded-md bg-rose-600 py-3 text-white font-semibold hover:bg-rose-700"
       >
-        Send Message
+        {loading ? "Sending..." : "Send Message"}
       </button>
     </form>
   );
 }
 
-/* --------- Reusable Input ---------- */
+/* ---------- Reusable Input ---------- */
 function Input({ label, isTextArea = false, ...props }) {
   const classes =
     "mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-rose-500 focus:ring-rose-500 sm:text-sm p-3";
