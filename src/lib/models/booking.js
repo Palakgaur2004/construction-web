@@ -7,7 +7,7 @@ const BookingSchema = new mongoose.Schema(
     phone: String,
     address: String,
     date: String,
-    time: String, // ✅ Added this field
+    time: String, 
   },
   { timestamps: true }
 );
