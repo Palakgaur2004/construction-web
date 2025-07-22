@@ -121,7 +121,7 @@ export default function BlogPage() {
   );
 }
 
-// ✅ Separated animated post card
+//  Separated animated post card
 function AnimatedPostCard({ post, delay }) {
   const ref = useRef(null);
   const inView = useInView(ref, {

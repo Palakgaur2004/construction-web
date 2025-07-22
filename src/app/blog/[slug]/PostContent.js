@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export default function PostContent({ post }) {
   return (
     <main className="max-w-3xl mx-auto px-6 py-20">
-      {/* ✅ Animate only heading + image part */}
+      {/*  Animate only heading + image part */}
       <motion.div
         initial={{ opacity: 0, y: 32 }}
         animate={{ opacity: 1, y: 0 }}
@@ -18,7 +18,7 @@ export default function PostContent({ post }) {
           {post.author} • {post.date}
         </p>
 
-        {/* ✅ Blog Image */}
+        {/*  Blog Image */}
         <Image
           src={post.image}
           alt={post.title}
@@ -29,7 +29,7 @@ export default function PostContent({ post }) {
         />
       </motion.div>
 
-      {/* ❌ No animation here to prevent content from disappearing */}
+      {/*  No animation here to prevent content from disappearing */}
       <div
         className="prose prose-slate max-w-none text-slate-800"
         dangerouslySetInnerHTML={{ __html: post.content }}

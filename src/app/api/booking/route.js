@@ -12,11 +12,11 @@ export async function POST(req) {
       phone: body.phone,
       address: body.address,
       date: body.date,
-      time: body.time, // ✅ Added time field
+      time: body.time, // Added time field
     };
 
     await connectToDatabase();
-    await Booking.create(data); // ✅ Save in MongoDB
+    await Booking.create(data); //  Save in MongoDB
 
     const transporter = nodemailer.createTransport({
       service: "gmail",

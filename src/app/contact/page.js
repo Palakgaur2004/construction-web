@@ -165,8 +165,8 @@ function BookingForm() {
 /* ---------- Quote Form ---------- */
 function QuoteForm() {
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState("");   // success message
-  const [error, setError] = useState("");       // error message
+  const [success, setSuccess] = useState("");   
+  const [error, setError] = useState("");       
 
   const handleSubmit = async (e) => {
     e.preventDefault();
